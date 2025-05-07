@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <footer className="text-xs text-center">
+      <footer className="text-very-dark-desaturated-blue text-center text-xs">
         Challenge by
         <a
           className="pl-1"

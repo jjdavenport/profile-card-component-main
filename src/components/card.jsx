@@ -4,20 +4,22 @@ import CardItem from "./card-item";
 const Card = () => {
   return (
     <>
-      <main>
-        <div className="h-40"></div>
-        <div className="bg-white p-1 rounded-full">
-          <img className="object-contain rounded-full" src={profile} />
+      <main className="flex w-80 flex-col items-center overflow-hidden rounded-xl bg-white shadow-md">
+        <div className="bg-card h-36 w-full"></div>
+        <div className="-mt-12 w-24 rounded-full bg-white p-1">
+          <img className="rounded-full object-contain" src={profile} />
         </div>
-        <div>
-          <div className="flex flex-col gap-2">
-            <div className="flex gap-2">
-              <span>Victor Crest</span>
-              <span>26</span>
+        <div className="divide-dark-gray flex h-44 w-full flex-col items-center justify-center divide-y text-center">
+          <div className="flex h-full w-full flex-col items-center justify-center gap-1">
+            <div className="flex gap-2 text-lg">
+              <span className="text-very-dark-desaturated-blue font-bold">
+                Victor Crest
+              </span>
+              <span className="text-dark-gray">26</span>
             </div>
-            <span>London</span>
+            <span className="text-dark-gray text-sm">London</span>
           </div>
-          <ul className="flex gap-2">
+          <ul className="flex h-full w-full items-center justify-between px-10">
             <CardItem title="80K" subTitle="Followers" />
             <CardItem title="803K" subTitle="Likes" />
             <CardItem title="1.4K" subTitle="Photos" />
