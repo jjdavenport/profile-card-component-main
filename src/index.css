@@ -10,7 +10,9 @@
     url("/src/assets/bg-pattern-bottom.svg"),
     url("/src/assets/bg-pattern-top.svg");
   --position: bottom -20% right -6000%, top -50% left -5000%;
+  --position-md: bottom 200% right -50%, top 200% left -60%;
   --size: 99%;
+  --size-md: 70%;
   --background-image-card: url("/src/assets/bg-pattern-card.svg");
   --font-custom: "kumbh sans", sans-serif;
 }

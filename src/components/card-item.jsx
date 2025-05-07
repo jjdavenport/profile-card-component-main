@@ -1,7 +1,7 @@
 const CardItem = ({ title, subTitle }) => {
   return (
     <>
-      <li className="flex flex-col gap-1 text-center">
+      <li className="flex flex-col text-center">
         <span className="text-very-dark-desaturated-blue text-lg font-bold">
           {title}
         </span>

@@ -9,8 +9,8 @@ const Card = () => {
         <div className="-mt-12 w-24 rounded-full bg-white p-1">
           <img className="rounded-full object-contain" src={profile} />
         </div>
-        <div className="divide-dark-gray flex h-44 w-full flex-col items-center justify-center divide-y text-center">
-          <div className="flex h-full w-full flex-col items-center justify-center gap-1">
+        <div className="divide-dark-gray flex h-40 w-full flex-col items-center justify-center divide-y text-center">
+          <div className="flex h-full w-full flex-col items-center justify-center">
             <div className="flex gap-2 text-lg">
               <span className="text-very-dark-desaturated-blue font-bold">
                 Victor Crest
