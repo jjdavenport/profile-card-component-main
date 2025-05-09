@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const CardItem = ({ title, subTitle }) => {
   return (
     <>
@@ -11,6 +13,11 @@ const CardItem = ({ title, subTitle }) => {
       </li>
     </>
   );
+};
+
+CardItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
 };
 
 export default CardItem;

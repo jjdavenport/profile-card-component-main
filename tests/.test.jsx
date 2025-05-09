@@ -20,14 +20,14 @@ describe("Card", () => {
 });
 
 describe("Footer", () => {
+  const links = [
+    {
+      label: "Frontend Mentor",
+      url: "https://www.frontendmentor.io?ref=challenge",
+    },
+    { label: "Github", url: "https://github.com/jjdavenport" },
+  ];
   it("renders the footer links with the correct href", () => {
-    const links = [
-      {
-        label: "Frontend Mentor",
-        url: "https://www.frontendmentor.io?ref=challenge",
-      },
-      { label: "Github", url: "https://github.com/jjdavenport" },
-    ];
     render(<Footer links={links} />);
     expect(
       screen.getByRole("link", { name: /frontend mentor/i }),
@@ -35,6 +35,24 @@ describe("Footer", () => {
     expect(screen.getByRole("link", { name: /jjdavenport/i })).toHaveAttribute(
       "href",
       "https://github.com/jjdavenport",
+    );
+  });
+  it("opens the link in a new tab", () => {
+    const link = {
+      label: "Frontend Mentor",
+      url: "https://www.frontendmentor.io?ref=challenge",
+    };
+    render(<Footer link={link} />);
+    const frontendLink = screen.getByRole("link", { name: /frontend mentor/i });
+    expect(frontendLink).toHaveAttribute("target", "_blank");
+  });
+  it("checks if the links have accessible tailwind class", () => {
+    render(<Footer links={links} />);
+    expect(screen.getByRole("link", { name: /frontend mentor/i })).toHaveClass(
+      "underline",
+    );
+    expect(screen.getByRole("link", { name: /jjdavenport/i })).toHaveClass(
+      "underline",
     );
   });
 });
